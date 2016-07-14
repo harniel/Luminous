@@ -16,6 +16,7 @@
         android:id="@+id/mImgPic"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+
         android:src="@drawable/fo" />
 
     <ToggleButton
@@ -24,8 +25,6 @@
         android:text="New ToggleButton"
         android:id="@+id/tBtnSwitch"
         android:layout_below="@+id/mImgPic"
-        android:textOn="OFF"
-        android:textOff="ON"
         android:layout_centerHorizontal="true"
         android:checked="false" />
 
