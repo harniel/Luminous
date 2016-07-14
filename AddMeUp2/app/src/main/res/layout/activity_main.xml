@@ -9,33 +9,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.cicct.addmeup2.MainActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/firstNum"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/secondNum" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/secondNum"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="+"
         android:id="@+id/textView"
-        android:layout_below="@+id/firstNum"
+        android:layout_below="@+id/firstNumber"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -43,7 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Add"
         android:id="@+id/equals"
-        android:layout_below="@+id/secondNum"
+        android:layout_below="@+id/secondNumber"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -51,8 +31,28 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:id="@+id/result"
-        android:textSize="128sp"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/equals"
+        android:textSize="50sp"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/secondNumber"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/firstNumber"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/secondNumber"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView" />
 </RelativeLayout>

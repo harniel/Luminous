@@ -19,17 +19,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mFirst = (EditText) findViewById(R.id.firstNum);
-        mSecond = (EditText) findViewById(R.id.secondNum);
+        mFirst = (EditText) findViewById(R.id.firstNumber);
+        mSecond = (EditText) findViewById(R.id.secondNumber);
         mEquals = (Button) findViewById(R.id.equals);
         mResult = (TextView) findViewById(R.id.result);
 
         mEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                add(Double.parseDouble(mFirst.getText().toString()), Double.parseDouble(mSecond.getText().toString()));
-                mResult.setText(result+"");
+                try {
+                    add(Double.parseDouble(mFirst.getText().toString()), Double.parseDouble(mSecond.getText().toString()));
+                    mResult.setText(result+"");
+                }catch (Exception e) {
+                    mResult.setText("Error input");
+                }
             }
         });
     }

@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageView mImgView;
-    private Button mBtnSwitch;
+    private ToggleButton mBtnSwitch;
 
     int count;
     @Override
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         count = 0;
-        mBtnSwitch = (Button) findViewById(R.id.btnSwitch);
+        mBtnSwitch = (ToggleButton) findViewById(R.id.tBtnSwitch);
         mImgView = (ImageView) findViewById(R.id.mImgPic);
         mBtnSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,11 +26,9 @@ public class MainActivity extends AppCompatActivity {
                 if (count == 0 ){
                     count++;
                     mImgView.setImageResource(R.drawable.fo);
-                    mBtnSwitch.setText("Off");
                 }else{
                     count--;
                     mImgView.setImageResource(R.drawable.on);
-                    mBtnSwitch.setText("On");
                 }
             }
         });
